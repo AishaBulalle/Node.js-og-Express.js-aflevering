@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Artist</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>artists</h1>
+      <button id="btn-create-artist">Create New Artist</button>
+    </header>
+
+    <main>
+      <section class="tools-grid">
+        <label for="select-sort-by"
+          >Sort by:
+          <select id="select-sort-by">
+            <option value="" selected>Not selected</option>
+            <option value="genres">Genres</option>
+            <option value="labels">Labels</option>
+          </select>
+        </label>
+      </section>
+      <section id="artists" class="grid-container"></section>
+    </main>
+
+    <!-- dialog - create new post -->
+    <dialog id="dialog-create-artist">
+      <h2>Create new artist</h2>
+      <form id="form-create-artist" method="dialog"
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <label for="birthdate">Birthdate:</label>
+        <input type="text" id="birthdate" required />
+        <label for="activeSince">activeSince:</label>
+        <input type="text" id="activeSince" required />
+        <label for="genres">genres:</label>
+        <input type="text" id="genres" required />
+        <label for="labels">labels:</label>
+        <input type="text" id="labels" required />
+        <label for="website">website:</label>
+        <input type="text" id="website" required />
+        <label for="image">image:</label>
+        <input type="text" id="image" required />
+        <label for="shortDescription">shortDescription:</label>
+        <input type="text" id="shortDescription" required />
+        <!-- Add more input fields for other artist properties -->
+        <button type="submit">Create</button>
+      </form>
+    </dialog>
+
+    <!-- dialog - update post -->
+    <dialog id="dialog-update-artist">
+      <h2>Update artist</h2>
+      <form id="form-update-artist" method="dialog">
+        <label for="updateName">Name:</label>
+        <input type="text" id="updateName" required />
+        <label for="updateBirthdate">Birthdate:</label>
+        <input type="text" id="updateBirthdate" required />
+        <label for="updateActiveSince">ActiveSince:</label>
+        <input type="text" id="updateActiveSince" required />
+        <label for="updateGenres">Genres:</label>
+        <input type="text" id="updateGenres" required />
+        <label for="updateLabels">Labels:</label>
+        <input type="text" id="updateLabels" required />
+        <label for="updateWebsite">Website:</label>
+        <input type="text" id="updateWebsite" required />
+        <label for="updateImage">Image:</label>
+        <input type="text" id="updateImage" required />
+        <label for="updateShortDescription">ShortDescription:</label>
+        <input type="text" id="updateShortDescription" required />
+        <!-- Add more input fields for other artist properties -->
+       
+        <button>Update artist</button>
+      </form>
+    </dialog>
+
+    <!-- dialog - delete post -->
+
+    <dialog id="dialog-delete-artist">
+      <p>Are you sure you want to delete this artist?</p>
+      <p id="dialog-delete-artist-title">Title of post</p>
+      <form id="form-delete-artist" method="dialog">
+        <button type="button" class="btn-cancel">No</button>
+        <button>Yes</button>
+      </form>
+    </dialog>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
